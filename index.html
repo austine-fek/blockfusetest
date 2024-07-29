@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="FEKAANGA AUSTINE">
+    <meta name="description" content="section B No 1">
+    <!-- permit me to use more of html and css...as I have limited knowledge on javascript -->
+    <title>RESTful API for a simple Library System</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Library System</h1>
+        <div class="form-group">
+            <input id="title" type="text" placeholder="Title">
+            <input id="author" type="text" placeholder="Author">
+            <input id="year" type="number" placeholder="Publication Year">
+            <input id="genre" type="text" placeholder="Genre">
+            <button onclick="createBook()">Add Book</button>
+        </div>
+        <h2>Books</h2>
+        <div id="books"></div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+
+
+</html>
+
+<!-- 1. Database Schema Structure
+Books Collection:
+
+_id (ObjectId)
+title (String)
+author (ObjectId, reference to Author)
+publicationYear (Number)
+genre (String)
+
+Authors Collection:
+_id (ObjectId)
+name (String)
+bio (String)
+
+2. Handling Relationships Between Books and Authors
+In MongoDB, I can use references to handle relationships between collections. A book will have a reference to an author using the author's ObjectId.
+
+3. Implementing Pagination
+Pagination can be implemented using query parameters such as page and limit.
+
+4. Securing API Endpoints
+I can secure API endpoints using JWT (JSON Web Tokens) for authentication and role-based access control for authorization. -->
